@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+}
+button {
+  background-color: #7851a9;
+  border: 1px solid #b9b9c3;
+  transition: 0.5s;
+}
+h1 {
+  color: white;
+  font-style: cursive;
+}
+summary {
+  color: #e0e0e0;
+}
+#results {
+  color: #9e1b32;
+}
