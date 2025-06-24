@@ -9,29 +9,29 @@
 <body>
   <h1><em>Multi-Purpose Converters</em></h1>
   <details>
-    <summary>In to MM</summary>
-    <input id="inch"></input>
-    <button onclick="displayMetric()">Convert</button>
-  </details>
-  <details>
-   <summary>MM to In</summary>
-    <input id="mm"></input>
+    <summary>Length Conversions</summary>
+    <input id="inch" placeholder="In to MM"></input>
+    <button onclick="displayMetric()">Convert</button><br>
+    <input id="mm" placeholder="MM to In"></input>
     <button onclick="displayImperial()">Convert</button>
   </details>
   <details>
-    <summary>Celsius to Fahrenheit</summary>
-    <input id="cell"></input>
-    <button onclick="displayTemp()">Convert</button>
+    <summary>Speed Conversions</summary>
+    <input id="knots" placeholder="knots to MPH">
+    <button onclick="displayMPH()">Convert</button><br>
+    <input id="mph" placeholder="MPH to Knots">
+    <button onclick="displayKnots()">Convert</button>
   </details>
   <details>
-    <summary>Fahrenheit to Celsius</summary>
-    <input id="fare"></input>
-    <button onclick="displayTemp()">Convert</button>
-  </details> 
+    <summary>Temperature Conversions</summary>
+    <input id="cell" placeholder="Celsius to Fahrenheit"></input>
+    <button onclick="displayTemp1()">Convert</button><br>
+    <input id="fare" placeholder="Fahrenheit to Celsius"></input>
+    <button onclick="displayTemp2()">Convert</button>
+  </details>
   <div id="results"></div>
-  <script src="inch.js"></script>
-  <script src="mm.js"></script>
-  <script src="cell.js"></script>
-  <script src="fare.js"></script>
+  <script src="length.js"></script>
+  <script src="speed.js"></script>
+  <script src="temp.js"></script>
 </body>
 </html>
