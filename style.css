@@ -16,3 +16,12 @@ summary {
 #results {
   color: #9e1b32;
 }
+
+footer {
+  color: #e0e0e0;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 1px solid #b9b9c3;
+}
