@@ -16,6 +16,13 @@
     <button onclick="displayImperial()">Convert</button>
   </details>
   <details>
+    <summary>Mass Conversions</summary>
+    <input id="lbs" placeholder="Lbs to Kilo"></input>
+    <button onclick="displayKilo()">Convert</button><br>
+    <input id="kilo" placeholder="Kilo to Lbs"></input>
+    <button onclick="displayPound()">Convert</button>
+  </details>
+  <details>
     <summary>Speed Conversions</summary>
     <input id="knots" placeholder="knots to MPH">
     <button onclick="displayMPH()">Convert</button><br>
@@ -31,10 +38,12 @@
   </details>
   <div id="results"></div>
   <script src="length.js"></script>
+  <script src="mass.js"></script>
   <script src="speed.js"></script>
   <script src="temp.js"></script>
   <footer>
-    Developed by Warden Boulder
+    Developed by Warden Boulder <br>
+    Version 1.5
   </footer>
 </body>
 </html>
