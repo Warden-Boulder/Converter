@@ -1,0 +1,42 @@
+<!-- Make a conversion rate website with the following collapsible attributes:
+// 1. in to mm
+// 2. mm to in
+// 3. c to f
+// 4. f to c -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Conversions</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <h1><em>Multi-Purpose Converters</em></h1>
+  <details>
+    <summary>In to MM</summary>
+    <input id="inch"></input>
+    <button onclick="displayMetric()">Convert</button>
+  </details>
+  <details>
+   <summary>MM to In</summary>
+    <input id="mm"></input>
+    <button onclick="displayImperial()">Convert</button>
+  </details>
+  <details>
+    <summary>Celsius to Fahrenheit</summary>
+    <input id="cell"></input>
+    <button onclick="displayTemp()">Convert</button>
+  </details>
+  <details>
+    <summary>Fahrenheit to Celsius</summary>
+    <input id="fare"></input>
+    <button onclick="displayTemp()">Convert</button>
+  </details> 
+  <div id="results"></div>
+  <script src="inch.js"></script>
+  <script src="mm.js"></script>
+  <script src="cell.js"></script>
+  <script src="fare.js"></script>
+</body>
+</html>
