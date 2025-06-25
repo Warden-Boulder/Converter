@@ -1,17 +1,26 @@
-function displayMPH() {
-  let knots = document.getElementById("knots").value || 0;
-  const conversion = parseFloat(knots)*1.15;
+function MPHtoKnots() {
+  let mph = document.getElementById("input3").value || 0;
+  const knots = parseFloat(mph)/1.15;
 
   let resultsHTML = "<h3>Result:</h3>";
-  resultsHTML += `<p>${knots} knot(s) = `+ conversion.toFixed(2) + " MPH</p>";
+  resultsHTML += `<p>${mph} MPH = `+ knots.toFixed(2) + " knot(s)</p>";
   document.getElementById("results").innerHTML = resultsHTML;
 }
 
-function displayKnots() {
-  let mph = document.getElementById("mph").value || 0;
-  const conversion = parseFloat(mph)/1.15;
+function KnotstoMPH() {
+  let knots = document.getElementById("input3").value || 0;
+  const mph = parseFloat(knots)*1.15;
 
   let resultsHTML = "<h3>Result:</h3>";
-  resultsHTML += `<p>${mph} MPH = `+ conversion.toFixed(2) + " Knot(s)</p>";
+  resultsHTML += `<p>${knots} knot(s) = `+ mph.toFixed(2) + " MPH</p>";
   document.getElementById("results").innerHTML = resultsHTML;
+}
+
+function displaySpeed() {
+  let speedSelect = document.getElementById(`speed`).value;
+  if (speedSelect==="mph") {
+    MPHtoKnots();
+  } else if (speedSelect==="knots") {
+    KnotstoMPH();
+  }
 }
