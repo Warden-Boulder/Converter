@@ -9,6 +9,7 @@ button {
 h1 {
   color: #9d7bdb;
   font-style: cursive;
+  text-align: center;
 }
 summary {
   color: #e0e0e0;
@@ -24,4 +25,7 @@ footer {
   padding: 10px;
   font-size: 14px;
   border-top: 1px solid #b9b9c3;
+}
+.underline {
+  text-decoration: underline;
 }
