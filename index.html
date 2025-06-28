@@ -12,41 +12,55 @@
     <summary class="underline">Length Conversions</summary>
     <select name="Length" id="length">
     <option value="null">---Select---</option>
-    <option value="in" id ="tomm">In to MM</option>
-    <option value="mm" id="toin">MM to In</option>
-    <option value="ft" id="tocm">Feet to Cm</option>
     <option value="cm" id="toft">Cm to Feet</option>
-    <option value="yd" id="tometer">Yard to Meter</option>
+    <option value="ft" id="tocm">Feet to Cm</option>
+    <option value="in" id ="tomm">In to MM</option>
+    <option value="km" id="tomi">Km to Mile</option>
     <option value="meter" id="toyd">Meter to Yard</option>
     <option value="mi" id="tokm">Mile to Km</option>
-    <option value="km" id="tomi">Km to Mile</option> -->
+    <option value="mm" id="toin">MM to In</option>
+    <option value="yd" id="tometer">Yard to Meter</option>
   </select><br>
-    <input id="input"></input> <button onclick="displayLength()">Convert</button>
+    <input id="LengthInput"></input> <button onclick="displayLength()">Convert</button>
   </details>
   <details>
     <summary class="underline">Mass Conversions</summary>
     <select name="Mass" id="mass">
     <option value="null">---Select---</option>
-    <option value="lbs" id ="lbstokilo">Lbs to Kilo</option>
-    <option value="kilo" id="kilotolbs">Kilo to Lbs</option>
+    <option value="gram" id=-tooz">Gram to Ounce</option>
+    <option value="kilo" id=-tolbs">Kilogram to Lbs</option>
+    <option value="kg" id=-tost.">Kilogram to Stone</option>
+    <option value="lbs" id ="tokilo">Lbs to Kilogram</option>
+    <option value="lbs2" id=-tooz2">Lbs to Ounce</option>
+    <option value="ounce" id=-tog">Ounce to Gram</option>
+    <option value="oz2" id=-tolbs2">Ounce to Lbs</option>
+    <option value="stone" id=-tokg">Stone to Kilogram</option>
   </select><br>
-    <input id="input2"></input> <button onclick="displayMass()">Convert</button>
+    <input id="MassInput"></input> <button onclick="displayMass()">Convert</button>
   </details>
   <details>
     <summary class="underline">Speed Conversions</summary>
     <select name="Speed" id="speed">
       <option value="null">---Select---</option>
-      <option value="mph" id="mph">MPH to Knots</option>
+      <option value="kmh" id="kmh">Km/h to MPH</option>
+      <option value="kmh2" id="kmh2">Km/h to Knots</option>
       <option value="knots" id="knots">Knots to MPH</option>
+      <option value="knots2" id="knots2">Knots to Km/h</option>
+      <option value="mph" id="mph">MPH to Knots</option>
+      <option value="mph2" id="mph2">MPH to Km/h</option>
     </select><br>
-    <input id="input3"></input> <button onclick="displaySpeed()">Convert</button>
+    <input id="SpeedInput"></input> <button onclick="displaySpeed()">Convert</button>
   </details>
   <details>
     <summary class="underline">Temperature Conversions</summary>
     <select name="Temp" id="temp">
       <option value="null">---Select---</option>
-      <option value="fair" id="fair">°F to °C</option>
       <option value="cell" id="cell">°C to °F</option>
+      <option value="ck" id="ck">°C to °K</option>
+      <option value="fair" id="fair">°F to °C</option>
+      <option value="kelvin" id="kelvin">°F to °K</option>
+      <option value="kc" id="kc">°K to °C</option>
+      <option value="kf" id="kf">°K to °F</option>
     </select><br>
     <input id="tempInput"></input>
     <button onclick="displayTemp()">Convert</button>
@@ -59,14 +73,10 @@
   <footer>
     <div>
       <p>Developed by Warden Boulder</p>
-      <h4>Version 2.0 (WIP)</h4>
-      <p><strong>Upcoming Updates:</strong></p>
-      <ul>
-        <li>Mass Conversions</li>
-        <li>Speed Conversions</li>
-        <li>Temperature Conversions</li>
-      </ul>
-      <p>Version 3.0 (TBD)</p>
+      <h4>Version 2</h4>
+      <!--<p><strong>Upcoming Updates:</strong></p>
+      <ul></ul> -->
+      <p>Version 3 (TBD)</p>
       <p><strong>Potential Updates for Version 3.0:</strong></p>
       <ul>
         <li>Language Selections</li>
