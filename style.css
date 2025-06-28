@@ -1,31 +1,37 @@
 body {
   background-color: black;
 }
+
 button {
   background-color: #7851a9;
   border: 1px solid #b9b9c3;
   transition: 0.5s;
 }
+
+footer {
+  border-top: 1px solid #b9b9c3;
+  color: #e0e0e0;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
 h1 {
   color: #9d7bdb;
   font-style: cursive;
   text-align: center;
 }
-summary {
-  color: #e0e0e0;
-}
+
 #results {
   color: #9e1b32;
 }
 
-footer {
+summary {
   color: #e0e0e0;
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  font-size: 14px;
-  border-top: 1px solid #b9b9c3;
 }
+
 .underline {
   text-decoration: underline;
 }
