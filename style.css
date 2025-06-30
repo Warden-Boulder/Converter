@@ -28,6 +28,15 @@ h1 {
   color: #9e1b32;
 }
 
+.section-title {
+  font-family: Gerogia, serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom: 30px;
+  text-decoration: underline;
+}
+
 summary {
   color: #e0e0e0;
 }
