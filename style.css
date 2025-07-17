@@ -3,8 +3,9 @@ body {
 }
 
 button {
-  background-color: #7851a9;
+  background-color: lightgrey;
   border: 1px solid #b9b9c3;
+  border-radius: 15px;
   transition: 0.5s;
 }
 
@@ -33,7 +34,7 @@ h1 {
   font-size: 1.25rem;
   font-style: italic;
   font-weight: bold;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   text-decoration: underline;
 }
 
