@@ -69,14 +69,22 @@
       <summary class="section-title">Time Conversions</summary>
       <select name="Time" id="time">
         <option value="null">---Select---</option>
+        <option value="min1" id="min1">Minute to Hour</option>
+        <option value="min2" id="min2">Minute to Day</option>
+        <option value="hour" id="hour">Hour to Day</option>
         <option value="sec1" id="sec1">Second to Minute</option>
-      </select>
+        <option value="sec2" id="sec2">Second to Hour</option>
+        <option value="sec3" id="sec3">Second to Day</option>
+      </select><br>
+      <input id="timeInput"></input>
+    <button onclick="displayTime()">Convert</button>
     </details>
   <div id="results"></div>
   <script src="length.js"></script>
   <script src="mass.js"></script>
   <script src="speed.js"></script>
   <script src="temp.js"></script>
+  <script src="time.js"></script>
   <footer>
       <strong>Developed by Warden Boulder<br>
       <a href="https://linktr.ee/no13boulder">Linktree</a><br>
@@ -87,7 +95,6 @@
         2. Volume Conversions<br>
         3. Cross Unit Conversions<br>
         4. Energy & Power Conversions<br>
-        5. Time Conversions
 </footer>
 </body>
 </html>
