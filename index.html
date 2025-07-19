@@ -9,6 +9,76 @@
 <body>
   <h1 class="underline"><em>Unit Conversions</em></h1>
   <details>
+    <summary class="section-title">Electrical Conversions (WIP)</summary>
+    <select name="electric" id="electric">
+    <option value="null">---Select---</option>
+    <option>Amps to MegaAmps</option>
+    <option>Amps to MilliAmps</option>
+    <option>Amps to Ohms</option>
+    <option>Amps to Volts</option>
+    <option>MegaAmps to Amps</option>
+    <option>MegaOhms to Ohms</option>
+    <option>MegaVolts to Ohms</option>
+    <option>MilliAmps to Amps</option>
+    <option>MilliVolts to Volts</option>
+    <option>Ohms to Amps</option>
+    <option>Ohms to MegaOhms</option>
+    <option>Ohms to MilliOhms</option>
+    <option>Ohms to Volts</option>
+    <option>Volts to Amps</option>
+    <option>Volts to MegaVolts</option>
+    <option>Volts to MilliVolts</option>
+    </select>
+  </details><br>
+  <details>
+    <summary class="section-title">Energy & Power Conversions (WIP)</summary>
+    <select name="Energy" id="energy">
+    <option value="null">---Select---</option>
+      <optgroup label="Energy">
+        <option value="btu" id="btu">BTU to Joules</option>
+        <option value="cal" id="cal">Calorie to Joules</option>
+        <option value="electro" id="electro">Electronvolt to Joules</option>
+        <option >Joules to BTU</option>
+        <option >Joules to Calorie</option >
+        <option >Joules to Electronvolt</option>
+      </optgroup>
+      <optgroup label="Power">
+        <option>Horsepower (Mechanical) to Watt</option>
+        <option>Horsepower (Metric) to Watt</option>
+        <option>Kilowatt to Watt</option>
+        <option>Watt to Horsepower (Mechanical)</option>
+        <option>Watt to Horsepower (Metric)</option>
+        <option>Watt to Kilowatt</option>
+      </optgroup>
+    </select>
+  </details><br>
+  <details>
+    <summary class="section-title">Fuel Conversions (WIP)</summary>
+    <select name="Length" id="length">
+    <option value="null">---Select---</option>
+      <optgroup label="Avgas">
+        <option>Gallon to Liter</option>
+        <option>Gallon to Pound</option>
+        <option>Kg to Liter</option>
+        <option>Kg to Pound</option>
+        <option>Liter to Kg</option>
+        <option>Liter to Gallon</option>
+        <option>Pound to Gallon</option>
+        <option>Pound to Kg</option>
+      </optgroup>
+      <optgroup label="Jet-A">
+        <option>Gallon to Liter</option>
+        <option>Gallon to Pound</option>
+        <option>Kg to Liter</option>
+        <option>Kg to Pound</option>
+        <option>Liter to Kg</option>
+        <option>Liter to Gallon</option>
+        <option>Pound to Gallon</option>
+        <option>Pound to Kg</option>
+      </optgroup>
+    </select>
+  </details><br>
+  <details>
     <summary class="section-title">Length Conversions</summary>
     <select name="Length" id="length">
     <option value="null">---Select---</option>
@@ -21,7 +91,7 @@
     <option value="mm" id="toin">MM to In</option>
     <option value="yd" id="tometer">Yard to Meter</option>
   </select><br>
-    <input id="LengthInput"></input> <button onclick="displayLength()">Convert</button>
+    <input id="LengthInput" placeholder="Enter value to convert"></input> <button onclick="displayLength()">Convert</button>
   </details><br>
   <details>
     <summary class="section-title">Mass Conversions</summary>
@@ -36,7 +106,7 @@
     <option value="oz2" id=-tolbs2">Ounce to Lbs</option>
     <option value="stone" id=-tokg">Stone to Kilogram</option>
   </select><br>
-    <input id="MassInput"></input> <button onclick="displayMass()">Convert</button>
+    <input id="MassInput" placeholder="Enter value to convert"></input> <button onclick="displayMass()">Convert</button>
   </details><<br>
   <details>
     <summary class="section-title">Speed Conversions</summary>
@@ -49,20 +119,20 @@
       <option value="mph" id="mph">MPH to Knots</option>
       <option value="mph2" id="mph2">MPH to Km/h</option>
     </select><br>
-    <input id="SpeedInput"></input> <button onclick="displaySpeed()">Convert</button>
+    <input id="SpeedInput" placeholder="Enter value to convert"></input> <button onclick="displaySpeed()">Convert</button>
   </details><br>
   <details>
     <summary class="section-title">Temperature Conversions</summary>
     <select name="Temp" id="temp">
       <option value="null">---Select---</option>
-      <option value="cell" id="cell">°C to °F</option>
+      <option value="CtoF" id="CtoF">°C to °F</option>
       <option value="ck" id="ck">°C to °K</option>
-      <option value="fair" id="fair">°F to °C</option>
-      <option value="kelvin" id="kelvin">°F to °K</option>
-      <option value="kc" id="kc">°K to °C</option>
-      <option value="kf" id="kf">°K to °F</option>
+      <option value="FtoC" id="FtoC">°F to °C</option>
+      <option value="FtoK" id="FtoK">°F to °K</option>
+      <option value="KtoC" id="KtoC">°K to °C</option>
+      <option value="KtoF"id="KtoF">°K to °F</option>
     </select><br>
-    <input id="tempInput"></input>
+    <input id="tempInput" placeholder="Enter value to convert"></input>
     <button onclick="displayTemp()">Convert</button>
   </details><br>
     <details>
@@ -76,25 +146,66 @@
         <option value="sec2" id="sec2">Second to Hour</option>
         <option value="sec3" id="sec3">Second to Day</option>
       </select><br>
-      <input id="timeInput"></input>
+      <input id="timeInput" placeholder="Enter value to convert"></input>
     <button onclick="displayTime()">Convert</button>
-    </details>
-  <div id="results"></div>
+    </details><br>
+    <details>
+    <summary class="section-title">Volume Conversions (WIP)</summary>
+    <select name="Length" id="length">
+    <option value="null">---Select---</option>
+      <optgroup label="Imperial">
+        <option>Cup to Pint</option>
+        <option>Cup to Gallon</option>
+        <option>Cup to Quart</option>
+        <option>Gallon to Cup</option>
+        <option>Gallon to Pint</option>
+        <option>Gallon to Quart</option>
+        <option>Pint to Cup</option>
+        <option>Pint to Gallon</option>
+        <option>Pint to Quart</option>
+        <option>Quart to Cup</option>
+        <option>Quart to Gallon</option>
+        <option>Quart to Pint</option>
+        <option>Tablespoon to Teaspoon</option>
+        <option>Teaspoon to Tablespoon</option>
+      </optgroup>
+      <optgroup label="Metric">
+        <option>Fluid Ounce to MilliLiter</option>
+        <option>Liter to MilliLiter</option>
+        <option>MilliLiter to Fluid Ounce</option>
+        <option>MilliLiter to Liter</option>
+        <option>MilliLiter to Tablespoon</option>
+        <option>MilliLiter to Teaspoon</option>
+        <option>Tablespoon to MilliLiter</option>
+        <option>Teaspoon to MilliLiter</option>
+      </optgroup>
+      <optgroup label="Other">
+        <option>Cubic Centimeter to Cubic Foot</option>
+        <option>Cubic Centimeter to Cubic Inch</option>
+        <option>Cubic Foot to Cubic Centimeter</option>
+        <option>Cubic Foot to Cubic Inch</option>
+        <option>Cubic Inch to Cubic Centimeter</option>
+        <option>Cubic Inch to Cubic Foot</option>
+        <option>Gallon (UK) to Liter</option>
+        <option>Gallon (US) to Liter</option>
+        <option>Liter to Gallon (UK)</option>
+        <option>Liter to Gallon (US)</option>
+      </optgroup>
+    </select>
+  </details>
+  <div id="results"></div><br>
+  <button onclick="Clear()">Clear</button>
   <script src="length.js"></script>
   <script src="mass.js"></script>
   <script src="speed.js"></script>
   <script src="temp.js"></script>
   <script src="time.js"></script>
+  <script src="clear.js"></script>
   <footer>
-      <strong>Developed by Warden Boulder<br>
+      Developed by Warden Boulder<br>
       <a href="https://linktr.ee/no13boulder">Linktree</a><br>
-      Version 2.1</strong><br>
+      Version 2.5<br>
       Update to Version 3 (WIP)<br>
-      <strong>Potential Updates for Version 3:</strong><br>
-        1. Fuel Conversions<br>
-        2. Volume Conversions<br>
-        3. Cross Unit Conversions<br>
-        4. Energy & Power Conversions<br>
 </footer>
 </body>
 </html>
