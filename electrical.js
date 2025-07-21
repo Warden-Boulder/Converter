@@ -117,9 +117,17 @@ function displayElectric() {
     }
     resultsHTML += `<p>${input} Ohms = ${ohms} MilliOhms</p>`;
     document.getElementById("results").innerHTML = resultsHTML;
+  } else if (electricalSelect === "OtoV") {
+    resultsHTML += `<p>Conversion from Ohms to Volts requires current value (V = I × R)</p>`;
+    resultsHTML += `<p>Formula: Voltage (V) = Current (A) × Resistance (Ω)</p>`;
+    document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "VtoA") {
     resultsHTML += `<p>Conversion from Volts to Amps requires resistance value (I = V / R)</p>`;
     resultsHTML += `<p>Formula: Current (A) = Voltage (V) ÷ Resistance (Ω)</p>`;
+    document.getElementById("results").innerHTML = resultsHTML;
+  } else if (electricalSelect === "VtoO") {
+    resultsHTML += `<p>Conversion from Volts to Ohms requires current value (R = V / I)</p>`;
+    resultsHTML += `<p>Formula: Resistance (Ω) = Voltage (V) ÷ Current (A)</p>`;
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "VtoMV") {
     let M_Volts = input/1000000;
