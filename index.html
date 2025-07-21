@@ -9,26 +9,28 @@
 <body>
   <h1 class="underline"><em>Unit Conversions</em></h1>
   <details>
-    <summary class="section-title">Electrical Conversions (WIP)</summary>
+    <summary class="section-title">Electrical Conversions</summary>
     <select name="electric" id="electric">
     <option value="null">---Select---</option>
-    <option>Amps to MegaAmps</option>
-    <option>Amps to MilliAmps</option>
-    <option>Amps to Ohms</option>
-    <option>Amps to Volts</option>
-    <option>MegaAmps to Amps</option>
-    <option>MegaOhms to Ohms</option>
-    <option>MegaVolts to Ohms</option>
-    <option>MilliAmps to Amps</option>
-    <option>MilliVolts to Volts</option>
-    <option>Ohms to Amps</option>
-    <option>Ohms to MegaOhms</option>
-    <option>Ohms to MilliOhms</option>
-    <option>Ohms to Volts</option>
-    <option>Volts to Amps</option>
-    <option>Volts to MegaVolts</option>
-    <option>Volts to MilliVolts</option>
-    </select>
+    <option value="AtoMA">Amps to MegaAmps</option>
+    <option value="AtomA">Amps to MilliAmps</option>
+    <option value="AtoO">Amps to Ohms</option>
+    <option value="AtoV">Amps to Volts</option>
+    <option value="MAtoA">MegaAmps to Amps</option>
+    <option value="MOtoO">MegaOhms to Ohms</option>
+    <option value="MVtoV">MegaVolts to Volts</option>
+    <option value="mAtoA">MilliAmps to Amps</option>
+      <option value="mOtoO">MilliOhms to Ohms</option>
+    <option value="mVtoV">MilliVolts to Volts</option>
+    <option value="OtoA">Ohms to Amps</option>
+    <option value="OtoMO">Ohms to MegaOhms</option>
+    <option value="OtomO">Ohms to MilliOhms</option>
+    <option value="OtoV">Ohms to Volts</option>
+    <option value="VtoA">Volts to Amps</option>
+    <option value="VtoO">Volts to Ohms</option>
+    <option value="VtoMV">Volts to MegaVolts</option>
+    <option value="VtomV">Volts to MilliVolts</option>
+    </select><br>
     <input id="ElectricalInput" placeholder="Enter value to convert"></input> <button onclick="displayElectric()">Convert</button>
   </details><br>
   <details>
