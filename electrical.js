@@ -1,7 +1,36 @@
 function displayElectric() {
   let electricalSelect = document.getElementById("electric").value;
   let input = parseFloat(document.getElementById('ElectricalInput').value) || 0;
+  let input2 = parseFloat(document.getElementById('ElectricalInput2').value) || 0;
   let resultsHTML = "<h3>Results:</h3>";
+  let secondInput = document.getElementById('ElectricalInput2');
+  let firstInput = document.getElementById('ElectricalInput');
+  
+  if (['AtoO', 'AtoV', 'OtoA', 'OtoV', 'VtoA', 'VtoO'].includes(electricalSelect)) {
+    secondInput.style.display = 'inline';
+    if (electricalSelect === 'AtoO') {
+      firstInput.placeholder = 'Enter current (Amps)';
+      secondInput.placeholder = 'Enter voltage (Volts)';
+    } else if (electricalSelect === 'AtoV') {
+      firstInput.placeholder = 'Enter current (Amps)';
+      secondInput.placeholder = 'Enter resistance (Ohms)';
+    } else if (electricalSelect === 'OtoA') {
+      firstInput.placeholder = 'Enter resistance (Ohms)';
+      secondInput.placeholder = 'Enter voltage (Volts)';
+    } else if (electricalSelect === 'OtoV') {
+      firstInput.placeholder = 'Enter resistance (Ohms)';
+      secondInput.placeholder = 'Enter current (Amps)';
+    } else if (electricalSelect === 'VtoA') {
+      firstInput.placeholder = 'Enter voltage (Volts)';
+      secondInput.placeholder = 'Enter resistance (Ohms)';
+    } else if (electricalSelect === 'VtoO') {
+      firstInput.placeholder = 'Enter voltage (Volts)';
+      secondInput.placeholder = 'Enter current (Amps)';
+    }
+  } else {
+    secondInput.style.display = 'none';
+    firstInput.placeholder = 'Enter value to convert';
+  }
   if (electricalSelect === "AtoMA") {
     let amps = input/1000000;
     if (amps % 1 === 0) {
@@ -25,12 +54,38 @@ function displayElectric() {
     resultsHTML += `<p>${input} Amps = ${amps} MilliAmps</p>`;
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "AtoO") {
-    resultsHTML += `<p>Conversion from Amps to Ohms requires voltage value (R = V / I)</p>`;
-    resultsHTML += `<p>Formula: Resistance (Ω) = Voltage (V) ÷ Current (A)</p>`;
+    if (input2 === 0) {
+      resultsHTML += `<p>Please enter voltage value in the second input field</p>`;
+      resultsHTML += `<p>Formula: Resistance (Ω) = Voltage (V) ÷ Current (A)</p>`;
+    } else {
+      let resistance = input2 / input;
+      if (resistance % 1 === 0) {
+        resistance = resistance.toFixed(0);
+      } else if ((resistance*10) % 1 === 0) {
+        resistance = resistance.toFixed(1);
+      } else {
+        resistance = resistance.toFixed(2);
+      }
+      resultsHTML += `<p>${input} Amps × ${input2} Volts = ${resistance} Ohms</p>`;
+      resultsHTML += `<p>Formula used: R = V ÷ I</p>`;
+    }
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "AtoV") {
-    resultsHTML += `<p>Conversion from Amps to Volts requires resistance value (V = I × R)</p>`;
-    resultsHTML += `<p>Formula: Voltage (V) = Current (A) × Resistance (Ω)</p>`;
+    if (input2 === 0) {
+      resultsHTML += `<p>Please enter resistance value in the second input field</p>`;
+      resultsHTML += `<p>Formula: Voltage (V) = Current (A) × Resistance (Ω)</p>`;
+    } else {
+      let voltage = input * input2;
+      if (voltage % 1 === 0) {
+        voltage = voltage.toFixed(0);
+      } else if ((voltage*10) % 1 === 0) {
+        voltage = voltage.toFixed(1);
+      } else {
+        voltage = voltage.toFixed(2);
+      }
+      resultsHTML += `<p>${input} Amps × ${input2} Ohms = ${voltage} Volts</p>`;
+      resultsHTML += `<p>Formula used: V = I × R</p>`;
+    }
     document.getElementById("results").innerHTML = resultsHTML;
   }
    else if (electricalSelect === "MAtoA") {
@@ -92,8 +147,21 @@ function displayElectric() {
     resultsHTML += `<p>${input} MilliVolts = ${m_Volts} Volts</p>`;
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "OtoA") {
-    resultsHTML += `<p>Conversion from Ohms to Amps requires voltage value (I = V / R)</p>`;
-    resultsHTML += `<p>Formula: Current (A) = Voltage (V) ÷ Resistance (Ω)</p>`;
+    if (input2 === 0) {
+      resultsHTML += `<p>Please enter voltage value in the second input field</p>`;
+      resultsHTML += `<p>Formula: Current (A) = Voltage (V) ÷ Resistance (Ω)</p>`;
+    } else {
+      let current = input2 / input;
+      if (current % 1 === 0) {
+        current = current.toFixed(0);
+      } else if ((current*10) % 1 === 0) {
+        current = current.toFixed(1);
+      } else {
+        current = current.toFixed(2);
+      }
+      resultsHTML += `<p>${input2} Volts ÷ ${input} Ohms = ${current} Amps</p>`;
+      resultsHTML += `<p>Formula used: I = V ÷ R</p>`;
+    }
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "OtoMO") {
     let ohms = input/1000000;
@@ -118,16 +186,55 @@ function displayElectric() {
     resultsHTML += `<p>${input} Ohms = ${ohms} MilliOhms</p>`;
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "OtoV") {
-    resultsHTML += `<p>Conversion from Ohms to Volts requires current value (V = I × R)</p>`;
-    resultsHTML += `<p>Formula: Voltage (V) = Current (A) × Resistance (Ω)</p>`;
+    if (input2 === 0) {
+      resultsHTML += `<p>Please enter current value in the second input field</p>`;
+      resultsHTML += `<p>Formula: Voltage (V) = Current (A) × Resistance (Ω)</p>`;
+    } else {
+      let voltage = input2 * input;
+      if (voltage % 1 === 0) {
+        voltage = voltage.toFixed(0);
+      } else if ((voltage*10) % 1 === 0) {
+        voltage = voltage.toFixed(1);
+      } else {
+        voltage = voltage.toFixed(2);
+      }
+      resultsHTML += `<p>${input2} Amps × ${input} Ohms = ${voltage} Volts</p>`;
+      resultsHTML += `<p>Formula used: V = I × R</p>`;
+    }
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "VtoA") {
-    resultsHTML += `<p>Conversion from Volts to Amps requires resistance value (I = V / R)</p>`;
-    resultsHTML += `<p>Formula: Current (A) = Voltage (V) ÷ Resistance (Ω)</p>`;
+    if (input2 === 0) {
+      resultsHTML += `<p>Please enter resistance value in the second input field</p>`;
+      resultsHTML += `<p>Formula: Current (A) = Voltage (V) ÷ Resistance (Ω)</p>`;
+    } else {
+      let current = input / input2;
+      if (current % 1 === 0) {
+        current = current.toFixed(0);
+      } else if ((current*10) % 1 === 0) {
+        current = current.toFixed(1);
+      } else {
+        current = current.toFixed(2);
+      }
+      resultsHTML += `<p>${input} Volts ÷ ${input2} Ohms = ${current} Amps</p>`;
+      resultsHTML += `<p>Formula used: I = V ÷ R</p>`;
+    }
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "VtoO") {
-    resultsHTML += `<p>Conversion from Volts to Ohms requires current value (R = V / I)</p>`;
-    resultsHTML += `<p>Formula: Resistance (Ω) = Voltage (V) ÷ Current (A)</p>`;
+    if (input2 === 0) {
+      resultsHTML += `<p>Please enter current value in the second input field</p>`;
+      resultsHTML += `<p>Formula: Resistance (Ω) = Voltage (V) ÷ Current (A)</p>`;
+    } else {
+      let resistance = input / input2;
+      if (resistance % 1 === 0) {
+        resistance = resistance.toFixed(0);
+      } else if ((resistance*10) % 1 === 0) {
+        resistance = resistance.toFixed(1);
+      } else {
+        resistance = resistance.toFixed(2);
+      }
+      resultsHTML += `<p>${input} Volts ÷ ${input2} Amps = ${resistance} Ohms</p>`;
+      resultsHTML += `<p>Formula used: R = V ÷ I</p>`;
+    }
     document.getElementById("results").innerHTML = resultsHTML;
   } else if (electricalSelect === "VtoMV") {
     let M_Volts = input/1000000;
