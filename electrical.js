@@ -66,7 +66,7 @@ function displayElectric() {
       } else {
         resistance = resistance.toFixed(2);
       }
-      resultsHTML += `<p>${input} Amps × ${input2} Volts = ${resistance} Ohms</p>`;
+      resultsHTML += `<p>${input2} Volts ÷ ${input} Amps = ${resistance} Ohms</p>`;
       resultsHTML += `<p>Formula used: R = V ÷ I</p>`;
     }
     document.getElementById("results").innerHTML = resultsHTML;
@@ -198,7 +198,7 @@ function displayElectric() {
       } else {
         voltage = voltage.toFixed(2);
       }
-      resultsHTML += `<p>${input2} Amps × ${input} Ohms = ${voltage} Volts</p>`;
+      resultsHTML += `<p>${input} Ohms × ${input2} Amps = ${voltage} Volts</p>`;
       resultsHTML += `<p>Formula used: V = I × R</p>`;
     }
     document.getElementById("results").innerHTML = resultsHTML;
