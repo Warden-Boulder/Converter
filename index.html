@@ -34,54 +34,64 @@
     <input id="ElectricalInput" placeholder="Enter primary value"></input>
     <input id="ElectricalInput2" placeholder="Enter secondary value (for Ohm's Law)" style="display:none;"></input> 
     <button onclick="displayElectric()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
   </details><br>
   <details>
-    <summary class="section-title">Energy & Power Conversions (WIP)</summary>
+    <summary class="section-title">Energy & Power Conversions</summary>
     <select name="Energy" id="energy">
     <option value="null">---Select---</option>
       <optgroup label="Energy">
         <option value="btu" id="btu">BTU to Joules</option>
         <option value="cal" id="cal">Calorie to Joules</option>
         <option value="electro" id="electro">Electronvolt to Joules</option>
-        <option >Joules to BTU</option>
-        <option >Joules to Calorie</option >
-        <option >Joules to Electronvolt</option>
+        <option value="jtoBTU" id="jtoBTU">Joules to BTU</option>
+        <option value="jtocal" id="jtocal">Joules to Calorie</option >
+        <option value="jtoev" id="jtoev">Joules to Electronvolt</option>
       </optgroup>
       <optgroup label="Power">
-        <option>Horsepower (Mechanical) to Watt</option>
-        <option>Horsepower (Metric) to Watt</option>
-        <option>Kilowatt to Watt</option>
-        <option>Watt to Horsepower (Mechanical)</option>
-        <option>Watt to Horsepower (Metric)</option>
-        <option>Watt to Kilowatt</option>
+        <option value="mech" id="mech">Horsepower (Mechanical) to Watt</option>
+        <option value="met" id="met">Horsepower (Metric) to Watt</option>
+        <option value="kw" id="kw">Kilowatt to Watt</option>
+        <option value="wtomech" id="wtomech">Watt to Horsepower (Mechanical)</option>
+        <option value="wtomet" id="wtomet">Watt to Horsepower (Metric)</option>
+        <option value="wtokw" id="wtokw">Watt to Kilowatt</option>
       </optgroup>
-    </select>
+    </select><br>
+    <input id="EPInput" placeholder="Enter value to convert"></input>
+    <button onclick="displayEP()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
   </details><br>
   <details>
-    <summary class="section-title">Fuel Conversions (WIP)</summary>
-    <select name="Length" id="length">
+    <summary class="section-title">Fuel Conversions</summary>
+    <select name="Fuel" id="fuel">
     <option value="null">---Select---</option>
       <optgroup label="Avgas">
-        <option>Gallon to Liter</option>
-        <option>Gallon to Pound</option>
-        <option>Kg to Liter</option>
-        <option>Kg to Pound</option>
-        <option>Liter to Kg</option>
-        <option>Liter to Gallon</option>
-        <option>Pound to Gallon</option>
-        <option>Pound to Kg</option>
+        <option value="galtolit" id="galtolit">Gallon to Liter</option>
+        <option value="galtolbs" id="galtolbs">Gallon to Pound</option>
+        <option value="kgtolit" id="kgtolit">Kg to Liter</option>
+        <option value="kgtolbs" id="kgtolbs">Kg to Pound</option>
+        <option value="littikg" id="littikg">Liter to Kg</option>
+        <option value="littogallon" id="littogallon">Liter to Gallon</option>
+        <option value="lbstogal" id="lbstogal">Pound to Gallon</option>
+        <option value="lbstokg" id="lbstokg">Pound to Kg</option>
       </optgroup>
       <optgroup label="Jet-A">
-        <option>Gallon to Liter</option>
-        <option>Gallon to Pound</option>
-        <option>Kg to Liter</option>
-        <option>Kg to Pound</option>
-        <option>Liter to Kg</option>
-        <option>Liter to Gallon</option>
-        <option>Pound to Gallon</option>
-        <option>Pound to Kg</option>
+        <option value="jet1" id="jet1">Gallon to Liter</option>
+        <option value="jet2" id="jet2">Gallon to Pound</option>
+        <option value="jet3" id="jet3">Kg to Liter</option>
+        <option value="jet4" id="jet4">Kg to Pound</option>
+        <option value="jet5" id="jet5">Liter to Kg</option>
+        <option value="jet6" id="jet6">Liter to Gallon</option>
+        <option value="jet7" id="jet7">Pound to Gallon</option>
+        <option value="jet8" id="jet8">Pound to Kg</option>
       </optgroup>
-    </select>
+    </select><br>
+    <input id="FuelInput" placeholder="Enter value to convert"></input>
+    <button onclick="displayFuel()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
   </details><br>
   <details>
     <summary class="section-title">Length Conversions</summary>
@@ -97,6 +107,8 @@
     <option value="yd" id="tometer">Yard to Meter</option>
   </select><br>
     <input id="LengthInput" placeholder="Enter value to convert"></input> <button onclick="displayLength()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
   </details><br>
   <details>
     <summary class="section-title">Mass Conversions</summary>
@@ -112,6 +124,8 @@
     <option value="stone" id=-tokg">Stone to Kilogram</option>
   </select><br>
     <input id="MassInput" placeholder="Enter value to convert"></input> <button onclick="displayMass()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
   </details><<br>
   <details>
     <summary class="section-title">Speed Conversions</summary>
@@ -125,6 +139,8 @@
       <option value="mph2" id="mph2">MPH to Km/h</option>
     </select><br>
     <input id="SpeedInput" placeholder="Enter value to convert"></input> <button onclick="displaySpeed()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
   </details><br>
   <details>
     <summary class="section-title">Temperature Conversions</summary>
@@ -139,6 +155,8 @@
     </select><br>
     <input id="tempInput" placeholder="Enter value to convert"></input>
     <button onclick="displayTemp()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
   </details><br>
     <details>
       <summary class="section-title">Time Conversions</summary>
@@ -153,65 +171,71 @@
       </select><br>
       <input id="timeInput" placeholder="Enter value to convert"></input>
     <button onclick="displayTime()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
     </details><br>
     <details>
-    <summary class="section-title">Volume Conversions (WIP)</summary>
-    <select name="Length" id="length">
+    <summary class="section-title">Volume Conversions</summary>
+    <select name="Volume" id="volume">
     <option value="null">---Select---</option>
       <optgroup label="Imperial">
-        <option>Cup to Pint</option>
-        <option>Cup to Gallon</option>
-        <option>Cup to Quart</option>
-        <option>Gallon to Cup</option>
-        <option>Gallon to Pint</option>
-        <option>Gallon to Quart</option>
-        <option>Pint to Cup</option>
-        <option>Pint to Gallon</option>
-        <option>Pint to Quart</option>
-        <option>Quart to Cup</option>
-        <option>Quart to Gallon</option>
-        <option>Quart to Pint</option>
-        <option>Tablespoon to Teaspoon</option>
-        <option>Teaspoon to Tablespoon</option>
+        <option value="imp1" id="imp1">Cup to Pint</option>
+        <option value="imp2" id="imp2">Cup to Gallon</option>
+        <option value="imp3" id="imp3">Cup to Quart</option>
+        <option value="imp4" id="imp4">Gallon to Cup</option>
+        <option value="imp5" id="imp5">Gallon to Pint</option>
+        <option value="imp6" id="imp6">Gallon to Quart</option>
+        <option value="imp7" id="imp7">Pint to Cup</option>
+        <option value="imp8" id="imp8">Pint to Gallon</option>
+        <option value="imp9" id="imp9">Pint to Quart</option>
+        <option value="imp0" id="imp0">Quart to Cup</option>
+        <option value="imp10" id="imp10">Quart to Gallon</option>
+        <option value="imp11" id="imp11">Quart to Pint</option>
+        <option value="imp12" id="imp12">Tablespoon to Teaspoon</option>
+        <option value="imp13" id="imp13">Teaspoon to Tablespoon</option>
       </optgroup>
       <optgroup label="Metric">
-        <option>Fluid Ounce to MilliLiter</option>
-        <option>Liter to MilliLiter</option>
-        <option>MilliLiter to Fluid Ounce</option>
-        <option>MilliLiter to Liter</option>
-        <option>MilliLiter to Tablespoon</option>
-        <option>MilliLiter to Teaspoon</option>
-        <option>Tablespoon to MilliLiter</option>
-        <option>Teaspoon to MilliLiter</option>
+        <option value="metric1" id="metric1">Fluid Ounce to MilliLiter</option>
+        <option value="metric2" id="metric2">Liter to MilliLiter</option>
+        <option value="metric3" id="metric3">MilliLiter to Fluid Ounce</option>
+        <option value="metric4" id="metric4">MilliLiter to Liter</option>
+        <option value="metric5" id="metric5">MilliLiter to Tablespoon</option>
+        <option value="metric6" id="metric6">MilliLiter to Teaspoon</option>
+        <option value="metric7" id="metric7">Tablespoon to MilliLiter</option>
+        <option value="metric8" id="metric8">Teaspoon to MilliLiter</option>
       </optgroup>
       <optgroup label="Other">
-        <option>Cubic Centimeter to Cubic Foot</option>
-        <option>Cubic Centimeter to Cubic Inch</option>
-        <option>Cubic Foot to Cubic Centimeter</option>
-        <option>Cubic Foot to Cubic Inch</option>
-        <option>Cubic Inch to Cubic Centimeter</option>
-        <option>Cubic Inch to Cubic Foot</option>
-        <option>Gallon (UK) to Liter</option>
-        <option>Gallon (US) to Liter</option>
-        <option>Liter to Gallon (UK)</option>
-        <option>Liter to Gallon (US)</option>
+        <option value="other1" id="other1">Cubic Centimeter to Cubic Foot</option>
+        <option value="other2" id="other2">Cubic Centimeter to Cubic Inch</option>
+        <option value="other3" id="other3">Cubic Foot to Cubic Centimeter</option>
+        <option value="other4" id="other4">Cubic Foot to Cubic Inch</option>
+        <option value="other5" id="other5">Cubic Inch to Cubic Centimeter</option>
+        <option value="other6" id="other6">Cubic Inch to Cubic Foot</option>
+        <option value="other7" id="other7">Gallon (UK) to Liter</option>
+        <option value="other8" id="other8">Gallon (US) to Liter</option>
+        <option value="other9" id="other9">Liter to Gallon (UK)</option>
+        <option value="other0" id="other0">Liter to Gallon (US)</option>
       </optgroup>
-    </select>
+    </select><br>
+    <input id="VolumeInput" placeholder="Enter value to convert"></input>
+    <button onclick="displayVolume()">Convert</button>
+    <div id="results"></div><br>
+    <button onclick="Clear()">Clear</button>
   </details>
-  <div id="results"></div><br>
-  <button onclick="Clear()">Clear</button>
   <script src="clear.js"></script>
   <script src="electrical.js"></script>
+  <script src="energy.js"></script>
+  <script src="fuel.js"></script>
   <script src="length.js"></script>
   <script src="mass.js"></script>
   <script src="speed.js"></script>
   <script src="temp.js"></script>
   <script src="time.js"></script>
+  <script src="volume.js"></script>
   <footer>
       Developed by Warden Boulder<br>
       <a href="https://linktr.ee/no13boulder">Linktree</a><br>
-      Version 2.5<br>
-      Update to Version 3 (WIP)<br>
+      Version 3<br>
 </footer>
 </body>
 </html>
