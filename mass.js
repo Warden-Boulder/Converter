@@ -22,7 +22,7 @@ function displayMass() {
 function toGram() {
   let oz = document.getElementById("MassInput").value || 0;
   let gram = parseFloat(oz) * 28.3495;
-  
+
   if (gram.toFixed(2).endsWith('.00')) {
     gram = gram.toFixed(0);
   } else if (gram.toFixed(2).endsWith('0')) {
@@ -39,13 +39,13 @@ function toGram() {
   } else {
     resultsHTML += `<p>${oz} ounces = `+ gram + " grams</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("massResults").innerHTML = resultsHTML;
 }
 
 function toKg() {
   let stone = document.getElementById("MassInput").value || 0;
   let kg = parseFloat(stone) * 6.35029;
-  
+
   if (kg.toFixed(2).endsWith('.00')) {
     kg = kg.toFixed(0);
   } else if (kg.toFixed(2).endsWith('0')) {
@@ -62,7 +62,7 @@ function toKg() {
   } else {
     resultsHTML += `<p>${stone} stones = `+ kg + " Kilograms</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("massResults").innerHTML = resultsHTML;
 }
 
 function toKilo() {
@@ -85,13 +85,13 @@ function toKilo() {
   } else {
     resultsHTML += `<p>${lbs} lbs = `+ kilo + " Kilograms</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("massResults").innerHTML = resultsHTML;
 }
 
 function toLbs() {
   let kilo = document.getElementById("MassInput").value || 0;
   let lbs = parseFloat(kilo)*2.2;
-  
+
   if (lbs.toFixed(2).endsWith('.00')) {
     lbs = lbs.toFixed(0);
   } else if (lbs.toFixed(2).endsWith('0')) {
@@ -108,13 +108,13 @@ function toLbs() {
   } else {
     resultsHTML += `<p>${kilo} Kilograms = `+ lbs + " lbs</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("massResults").innerHTML = resultsHTML;
 }
 
 function toLbs2() {
   let oz = document.getElementById("MassInput").value || 0;
   let lbs = parseFloat(oz) / 16;
-  
+
   if (lbs.toFixed(2).endsWith('.00')) {
     lbs = lbs.toFixed(0);
   } else if (lbs.toFixed(2).endsWith('0')) {
@@ -131,13 +131,13 @@ function toLbs2() {
   } else {
     resultsHTML += `<p>${oz} ounces = `+ lbs + " lbs</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("massResults").innerHTML = resultsHTML;
 }
 
 function toOz() {
   let gram = document.getElementById("MassInput").value || 0;
   let oz = parseFloat(gram) * 0.035274;
-  
+
   if (oz.toFixed(2).endsWith('.00')) {
     oz = oz.toFixed(0);
   } else if (oz.toFixed(2).endsWith('0')) {
@@ -154,13 +154,13 @@ function toOz() {
   } else {
     resultsHTML += `<p>${gram} grams = `+ oz + " ounces</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("massResults").innerHTML = resultsHTML;
 }
 
 function toOz2() {
   let lbs = document.getElementById("MassInput").value || 0;
   let oz = parseFloat(lbs) * 16;
-  
+
   if (oz.toFixed(2).endsWith('.00')) {
     oz = oz.toFixed(0);
   } else if (oz.toFixed(2).endsWith('0')) {
@@ -177,13 +177,13 @@ function toOz2() {
   } else {
     resultsHTML += `<p>${lbs} lbs = `+ oz + " ounces</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("massResults").innerHTML = resultsHTML;
 }
 
 function toStone() {
   let kg = document.getElementById("MassInput").value || 0;
   let stone = parseFloat(kg) * 0.157473;
-  
+
   if (stone.toFixed(2).endsWith('.00')) {
     stone = stone.toFixed(0);
   } else if (stone.toFixed(2).endsWith('0')) {
@@ -200,5 +200,5 @@ function toStone() {
   } else {
     resultsHTML += `<p>${kg} Kilograms = `+ stone + " stones</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("massResults").innerHTML = resultsHTML;
 }
