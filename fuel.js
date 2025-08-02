@@ -183,5 +183,5 @@ function displayFuel() {
     resultsHTML += `<p>${input} Pounds = ${result} Kg</p>`;
   }
 
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("fuelResults").innerHTML = resultsHTML;
 }
