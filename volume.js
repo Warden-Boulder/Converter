@@ -412,5 +412,5 @@ function displayVolume() {
     resultsHTML += `<p>${input} Liters = ${result} Gallons (US)</p>`;
   }
 
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("volumeResults").innerHTML = resultsHTML;
 }
