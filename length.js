@@ -41,7 +41,7 @@ function toCm() {
   } else {
     resultsHTML += `<p> ${feet} feet = `+ cm + " cm</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
 
 function toFt() {
@@ -62,13 +62,13 @@ function toFt() {
   } else {
     resultsHTML += `<p> ${cm} cm = `+ feet + " feet</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
 
 function toIn() {
   let mm = document.getElementById("LengthInput").value || 0;
   let inch = mm/25.4
-  
+
   if (inch.toFixed(2).endsWith('.00')) {
     inch= inch.toFixed(0);
   } else if (inch.toFixed(2).endsWith('0')) {
@@ -83,7 +83,7 @@ function toIn() {
   } else {
     resultsHTML += `<p> ${mm} MM = `+ inch + " inches</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
 
 function toKm() {
@@ -104,7 +104,7 @@ function toKm() {
   } else {
     resultsHTML += `<p> ${mi} miles = `+ km + " km</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
 
 function toMeter() {
@@ -127,7 +127,7 @@ function toMeter() {
   } else {
     resultsHTML += `<p> ${yard} yards = `+ meter + " meters</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
 
 function toMi() {
@@ -148,7 +148,7 @@ function toMi() {
   } else {
     resultsHTML += `<p> ${km} km = `+ mi + " miles</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
 
 function toMM(){
@@ -169,7 +169,7 @@ function toMM(){
   } else {
     resultsHTML += `<p> ${inches} inches = `+ MM + " MM</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
 
 function toYd() {
@@ -192,5 +192,5 @@ function toYd() {
   } else {
     resultsHTML += `<p> ${meter} meters = `+ yard + " yards</p>";
   }
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
