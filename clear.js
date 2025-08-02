@@ -1,5 +1,13 @@
 function Clear() {
-  document.getElementById("results").innerHTML = "";
+  document.getElementById("electricalResults").innerHTML = "";
+  document.getElementById("energyResults").innerHTML = "";
+  document.getElementById("fuelResults").innerHTML = "";
+  document.getElementById("lengthResults").innerHTML = "";
+  document.getElementById("massResults").innerHTML = "";
+  document.getElementById("speedResults").innerHTML = "";
+  document.getElementById("tempResults").innerHTML = "";
+  document.getElementById("timeResults").innerHTML = "";
+  document.getElementById("volumeResults").innerHTML = "";
   document.getElementById("ElectricalInput").value = "";
   document.getElementById("ElectricalInput2").value = "";
   document.getElementById("EPInput").value = "";
