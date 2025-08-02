@@ -128,5 +128,5 @@ function displayEP() {
     resultsHTML += `<p>${input} Watts = ${result} Kilowatts</p>`;
   }
 
-document.getElementById("results").innerHTML = resultsHTML;
+document.getElementById("energyResults").innerHTML = resultsHTML;
 }
