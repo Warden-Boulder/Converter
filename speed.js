@@ -18,10 +18,10 @@ function displaySpeed() {
 function KmhtoKnots() {
   let Kmh = document.getElementById("SpeedInput").value || 0;
   const knots = Kmh/1.852
-  
+
   let resultsHTML = "<h3>Result:</h3>";
   resultsHTML += `<p>${Kmh} Km/h = `+ knots.toFixed(2) + " Knot(s)</p>";
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("speedResults").innerHTML = resultsHTML;
 }
 
 function KmhtoMPH() {
@@ -30,16 +30,16 @@ function KmhtoMPH() {
 
   let resultsHTML = "<h3>Result:</h3>";
   resultsHTML += `<p>${kmh} Km/h = `+ mph.toFixed(2) + " mph</p>";
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("speedResults").innerHTML = resultsHTML;
 }
 
 function KnotstoKmh() {
   let knots = document.getElementById("SpeedInput").value || 0;
   const Kmh = knots*1.852
-  
+
   let resultsHTML = "<h3>Result:</h3>";
   resultsHTML += `<p>${knots} knot(s) = `+ Kmh.toFixed(2) + " Km/h</p>";
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("speedResults").innerHTML = resultsHTML;
 }
 
 function KnotstoMPH() {
@@ -48,7 +48,7 @@ function KnotstoMPH() {
 
   let resultsHTML = "<h3>Result:</h3>";
   resultsHTML += `<p>${knots} knot(s) = `+ mph.toFixed(2) + " MPH</p>";
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("speedResults").innerHTML = resultsHTML;
 }
 
 function MPHtoKmh() {
@@ -57,7 +57,7 @@ function MPHtoKmh() {
 
   let resultsHTML = "<h3>Result:</h3>";
   resultsHTML += `<p>${mph} mph = `+ Kmh.toFixed(2) + " Km/h</p>";
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("speedResults").innerHTML = resultsHTML;
 }
 
 function MPHtoKnots() {
@@ -66,5 +66,5 @@ function MPHtoKnots() {
 
   let resultsHTML = "<h3>Result:</h3>";
   resultsHTML += `<p>${mph} mph = `+ knots.toFixed(2) + " knot(s)</p>";
-  document.getElementById("results").innerHTML = resultsHTML;
+  document.getElementById("speedResults").innerHTML = resultsHTML;
 }
