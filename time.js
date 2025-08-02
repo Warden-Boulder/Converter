@@ -21,7 +21,7 @@ function displayTime() {
     } else {
       resultsHTML += `<p> ${formattedInput} minutes = ${result} hour(s)</p>`;
     }
-    document.getElementById("results").innerHTML = resultsHTML;
+    document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "min2") {
     const dayInMinutes = 1440;
     let input = parseFloat(document.getElementById('timeInput').value) || 0;
@@ -43,7 +43,7 @@ function displayTime() {
     } else {
       resultsHTML += `<p> ${formattedInput} minutes = ${result} day(s)</p>`;
     }
-    document.getElementById("results").innerHTML = resultsHTML;
+    document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "hour") {
     const dayInHours = 24;
     let input = parseFloat(document.getElementById('timeInput').value) || 0;
@@ -65,7 +65,7 @@ function displayTime() {
     } else {
       resultsHTML += `<p> ${formattedInput} hours = ${result} day(s)</p>`;
     }
-    document.getElementById("results").innerHTML = resultsHTML;
+    document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "sec1") {
     const minuteInSeconds = 60;
     let input = parseFloat(document.getElementById('timeInput').value) || 0;
@@ -87,7 +87,7 @@ function displayTime() {
     } else {
       resultsHTML += `<p> ${formattedInput} seconds = ${result} minute(s)</p>`;
     }
-    document.getElementById("results").innerHTML = resultsHTML;
+    document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "sec2") {
     const hourInSeconds = 3600;
     let input = parseFloat(document.getElementById('timeInput').value) || 0;
@@ -109,7 +109,7 @@ function displayTime() {
     } else {
       resultsHTML += `<p> ${formattedInput} seconds = ${result} hour(s)</p>`;
     }
-    document.getElementById("results").innerHTML = resultsHTML;
+    document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "sec3") {
     const dayInSeconds = 86400;
     let input = parseFloat(document.getElementById('timeInput').value) || 0;
@@ -131,6 +131,6 @@ function displayTime() {
     } else {
       resultsHTML += `<p> ${formattedInput} seconds = ${result} day(s)</p>`;
     }
-    document.getElementById("results").innerHTML = resultsHTML;
+    document.getElementById("timeResults").innerHTML = resultsHTML;
   }
 }
