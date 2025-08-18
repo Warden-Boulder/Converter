@@ -1,3 +1,4 @@
+
 function displayLength() {
   let lengthSelect = document.getElementById("length").value;
   if (lengthSelect === "in") {
@@ -35,11 +36,13 @@ function toCm() {
    cm = cm.toFixed(2);
   }
 
+  let formattedInput = feet >= 1000 ? parseFloat(feet).toLocaleString() : feet;
+  let formattedResult = cm >= 1000 ? parseFloat(cm).toLocaleString() : cm;
   let resultsHTML = "<h3>Result:</h3>";
   if (feet == 1) {
-    resultsHTML += `<p> ${feet} foot = `+ cm + " cm</p>";
+    resultsHTML += `<p> ${formattedInput} foot = `+ formattedResult + " cm</p>";
   } else {
-    resultsHTML += `<p> ${feet} feet = `+ cm + " cm</p>";
+    resultsHTML += `<p> ${formattedInput} feet = `+ formattedResult + " cm</p>";
   }
   document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
@@ -56,11 +59,13 @@ function toFt() {
    feet = feet.toFixed(2);
   }
 
+  let formattedInput = cm >= 1000 ? parseFloat(cm).toLocaleString() : cm;
+  let formattedResult = feet >= 1000 ? parseFloat(feet).toLocaleString() : feet;
   let resultsHTML = "<h3>Result:</h3>";
   if (feet == 1) {
-    resultsHTML += `<p> ${cm} cm = `+ feet + " foot</p>";
+    resultsHTML += `<p> ${formattedInput} cm = `+ formattedResult + " foot</p>";
   } else {
-    resultsHTML += `<p> ${cm} cm = `+ feet + " feet</p>";
+    resultsHTML += `<p> ${formattedInput} cm = `+ formattedResult + " feet</p>";
   }
   document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
@@ -77,11 +82,13 @@ function toIn() {
    inch = inch.toFixed(2);
   }
 
+  let formattedInput = mm >= 1000 ? parseFloat(mm).toLocaleString() : mm;
+  let formattedResult = inch >= 1000 ? parseFloat(inch).toLocaleString() : inch;
   let resultsHTML = "<h3>Result:</h3>";
   if (inch == 1) {
-    resultsHTML += `<p> ${mm} MM = `+ inch + " inch</p>";
+    resultsHTML += `<p> ${formattedInput} MM = `+ formattedResult + " inch</p>";
   } else {
-    resultsHTML += `<p> ${mm} MM = `+ inch + " inches</p>";
+    resultsHTML += `<p> ${formattedInput} MM = `+ formattedResult + " inches</p>";
   }
   document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
@@ -98,11 +105,13 @@ function toKm() {
    km = km.toFixed(2);
   }
 
+  let formattedInput = mi >= 1000 ? parseFloat(mi).toLocaleString() : mi;
+  let formattedResult = km >= 1000 ? parseFloat(km).toLocaleString() : km;
   let resultsHTML = "<h3>Result:</h3>";
   if (mi == 1) {
-    resultsHTML += `<p> ${mi} mile = `+ km + " km</p>";
+    resultsHTML += `<p> ${formattedInput} mile = `+ formattedResult + " km</p>";
   } else {
-    resultsHTML += `<p> ${mi} miles = `+ km + " km</p>";
+    resultsHTML += `<p> ${formattedInput} miles = `+ formattedResult + " km</p>";
   }
   document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
@@ -119,13 +128,15 @@ function toMeter() {
    meter = meter.toFixed(2);
   }
 
+  let formattedInput = yard >= 1000 ? parseFloat(yard).toLocaleString() : yard;
+  let formattedResult = meter >= 1000 ? parseFloat(meter).toLocaleString() : meter;
   let resultsHTML = "<h3>Result:</h3>";
   if (yard == 1) {
-    resultsHTML += `<p> ${yard} yard = `+ meter + " meters</p>";
+    resultsHTML += `<p> ${formattedInput} yard = `+ formattedResult + " meters</p>";
   } else if (meter == 1) {
-    resultsHTML += `<p> ${yard} yard = `+ meter + " meter</p>";
+    resultsHTML += `<p> ${formattedInput} yard = `+ formattedResult + " meter</p>";
   } else {
-    resultsHTML += `<p> ${yard} yards = `+ meter + " meters</p>";
+    resultsHTML += `<p> ${formattedInput} yards = `+ formattedResult + " meters</p>";
   }
   document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
@@ -142,11 +153,13 @@ function toMi() {
    mi = mi.toFixed(2);
   }
 
+  let formattedInput = km >= 1000 ? parseFloat(km).toLocaleString() : km;
+  let formattedResult = mi >= 1000 ? parseFloat(mi).toLocaleString() : mi;
   let resultsHTML = "<h3>Result:</h3>";
   if (mi == 1) {
-    resultsHTML += `<p> ${km} km = `+ mi + " mile</p>";
+    resultsHTML += `<p> ${formattedInput} km = `+ formattedResult + " mile</p>";
   } else {
-    resultsHTML += `<p> ${km} km = `+ mi + " miles</p>";
+    resultsHTML += `<p> ${formattedInput} km = `+ formattedResult + " miles</p>";
   }
   document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
@@ -163,11 +176,13 @@ function toMM(){
    MM = MM.toFixed(2);
   }
 
+  let formattedInput = inches >= 1000 ? parseFloat(inches).toLocaleString() : inches;
+  let formattedResult = MM >= 1000 ? parseFloat(MM).toLocaleString() : MM;
   let resultsHTML = "<h3>Result:</h3>";
   if (inches == 1) {
-    resultsHTML += `<p> ${inches} inch = `+ MM + " MM</p>";
+    resultsHTML += `<p> ${formattedInput} inch = `+ formattedResult + " MM</p>";
   } else {
-    resultsHTML += `<p> ${inches} inches = `+ MM + " MM</p>";
+    resultsHTML += `<p> ${formattedInput} inches = `+ formattedResult + " MM</p>";
   }
   document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
@@ -184,13 +199,15 @@ function toYd() {
    yard = yard.toFixed(2);
   }
 
+  let formattedInput = meter >= 1000 ? parseFloat(meter).toLocaleString() : meter;
+  let formattedResult = yard >= 1000 ? parseFloat(yard).toLocaleString() : yard;
   let resultsHTML = "<h3>Result:</h3>";
   if (yard == 1) {
-    resultsHTML += `<p> ${meter} meters = `+ yard + " yard</p>";
+    resultsHTML += `<p> ${formattedInput} meters = `+ formattedResult + " yard</p>";
   } else if (meter == 1) {
-    resultsHTML += `<p> ${meter} meter = `+ yard + " yards</p>";
+    resultsHTML += `<p> ${formattedInput} meter = `+ formattedResult + " yards</p>";
   } else {
-    resultsHTML += `<p> ${meter} meters = `+ yard + " yards</p>";
+    resultsHTML += `<p> ${formattedInput} meters = `+ formattedResult + " yards</p>";
   }
   document.getElementById("lengthResults").innerHTML = resultsHTML;
 }
