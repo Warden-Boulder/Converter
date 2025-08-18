@@ -1,3 +1,4 @@
+
 function displayTime() {
   let timeSelect = document.getElementById('time').value;
   if (timeSelect === "min1") {
@@ -14,12 +15,13 @@ function displayTime() {
     }
 
     let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
 
     let resultsHTML = "<h3>Result:</h3>";
     if (input === hourInMinutes) {
       resultsHTML += `<p> ${formattedInput} minutes = 1 hour</p>`;
     } else {
-      resultsHTML += `<p> ${formattedInput} minutes = ${result} hour(s)</p>`;
+      resultsHTML += `<p> ${formattedInput} minutes = ${formattedResult} hour(s)</p>`;
     }
     document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "min2") {
@@ -36,12 +38,13 @@ function displayTime() {
     }
 
     let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
 
     let resultsHTML = "<h3>Result:</h3>";
     if (input === dayInMinutes) {
       resultsHTML += `<p> ${formattedInput} minutes = 1 day</p>`;
     } else {
-      resultsHTML += `<p> ${formattedInput} minutes = ${result} day(s)</p>`;
+      resultsHTML += `<p> ${formattedInput} minutes = ${formattedResult} day(s)</p>`;
     }
     document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "hour") {
@@ -58,12 +61,13 @@ function displayTime() {
     }
 
     let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
 
     let resultsHTML = "<h3>Result:</h3>";
     if (input === dayInHours) {
       resultsHTML += `<p> ${formattedInput} hours = 1 day</p>`;
     } else {
-      resultsHTML += `<p> ${formattedInput} hours = ${result} day(s)</p>`;
+      resultsHTML += `<p> ${formattedInput} hours = ${formattedResult} day(s)</p>`;
     }
     document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "sec1") {
@@ -80,12 +84,13 @@ function displayTime() {
     }
 
     let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
 
     let resultsHTML = "<h3>Result:</h3>";
     if (input === minuteInSeconds) {
       resultsHTML += `<p> ${formattedInput} seconds = 1 minute</p>`;
     } else {
-      resultsHTML += `<p> ${formattedInput} seconds = ${result} minute(s)</p>`;
+      resultsHTML += `<p> ${formattedInput} seconds = ${formattedResult} minute(s)</p>`;
     }
     document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "sec2") {
@@ -102,12 +107,13 @@ function displayTime() {
     }
 
     let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
 
     let resultsHTML = "<h3>Result:</h3>";
     if (input === hourInSeconds) {
       resultsHTML += `<p> ${formattedInput} seconds = 1 hour</p>`;
     } else {
-      resultsHTML += `<p> ${formattedInput} seconds = ${result} hour(s)</p>`;
+      resultsHTML += `<p> ${formattedInput} seconds = ${formattedResult} hour(s)</p>`;
     }
     document.getElementById("timeResults").innerHTML = resultsHTML;
   } else if (timeSelect === "sec3") {
@@ -124,12 +130,13 @@ function displayTime() {
     }
 
     let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
 
     let resultsHTML = "<h3>Result:</h3>";
     if (input === dayInSeconds) {
       resultsHTML += `<p> ${formattedInput} seconds = 1 day</p>`;
     } else {
-      resultsHTML += `<p> ${formattedInput} seconds = ${result} day(s)</p>`;
+      resultsHTML += `<p> ${formattedInput} seconds = ${formattedResult} day(s)</p>`;
     }
     document.getElementById("timeResults").innerHTML = resultsHTML;
   }
