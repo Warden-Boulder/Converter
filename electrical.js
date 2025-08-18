@@ -40,7 +40,9 @@ function displayElectric() {
     } else {
       amps = amps.toFixed(6);
     }
-    resultsHTML += `<p>${input} Amps = ${amps} MegaAmps</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = amps >= 1000 ? amps.toLocaleString() : amps;
+    resultsHTML += `<p>${formattedInput} Amps = ${formattedResult} MegaAmps</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   } else if (electricalSelect === "AtomA") {
     let amps = input*1000;
@@ -51,7 +53,9 @@ function displayElectric() {
     } else {
       amps = amps.toFixed(2);
     }
-    resultsHTML += `<p>${input} Amps = ${amps} MilliAmps</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = amps >= 1000 ? amps.toLocaleString() : amps;
+    resultsHTML += `<p>${formattedInput} Amps = ${formattedResult} MilliAmps</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   } else if (electricalSelect === "AtoO") {
     if (input2 === 0) {
@@ -66,7 +70,10 @@ function displayElectric() {
       } else {
         resistance = resistance.toFixed(2);
       }
-      resultsHTML += `<p>${input2} Volts ÷ ${input} Amps = ${resistance} Ohms</p>`;
+      let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+      let formattedInput2 = input2 >= 1000 ? input2.toLocaleString() : input2;
+      let formattedResult = resistance >= 1000 ? resistance.toLocaleString() : resistance;
+      resultsHTML += `<p>${formattedInput2} Volts ÷ ${formattedInput} Amps = ${formattedResult} Ohms</p>`;
       resultsHTML += `<p>Formula used: R = V ÷ I</p>`;
     }
     document.getElementById("electricalResults").innerHTML = resultsHTML;
@@ -83,7 +90,10 @@ function displayElectric() {
       } else {
         voltage = voltage.toFixed(2);
       }
-      resultsHTML += `<p>${input} Amps × ${input2} Ohms = ${voltage} Volts</p>`;
+      let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+      let formattedInput2 = input2 >= 1000 ? input2.toLocaleString() : input2;
+      let formattedResult = voltage >= 1000 ? voltage.toLocaleString() : voltage;
+      resultsHTML += `<p>${formattedInput} Amps × ${formattedInput2} Ohms = ${formattedResult} Volts</p>`;
       resultsHTML += `<p>Formula used: V = I × R</p>`;
     }
     document.getElementById("electricalResults").innerHTML = resultsHTML;
@@ -97,7 +107,9 @@ function displayElectric() {
     } else {
       M_Amps = M_Amps.toFixed(2);
     }
-    resultsHTML += `<p>${input} MegaAmps = ${M_Amps} Amps</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = M_Amps >= 1000 ? M_Amps.toLocaleString() : M_Amps;
+    resultsHTML += `<p>${formattedInput} MegaAmps = ${formattedResult} Amps</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   }
    else if (electricalSelect === "MOtoO") {
@@ -109,7 +121,9 @@ function displayElectric() {
     } else {
       M_Ohms = M_Ohms.toFixed(2);
     }
-    resultsHTML += `<p>${input} MegaOhms = ${M_Ohms} Ohms</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = M_Ohms >= 1000 ? M_Ohms.toLocaleString() : M_Ohms;
+    resultsHTML += `<p>${formattedInput} MegaOhms = ${formattedResult} Ohms</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   }
    else if (electricalSelect === "MVtoV") {
@@ -121,30 +135,22 @@ function displayElectric() {
     } else {
       M_Volts = M_Volts.toFixed(2);
     }
-    resultsHTML += `<p>${input} MegaVolts = ${M_Volts} Volts</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = M_Volts >= 1000 ? M_Volts.toLocaleString() : M_Volts;
+    resultsHTML += `<p>${formattedInput} MegaVolts = ${formattedResult} Volts</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   }
    else if (electricalSelect === "mAtoA") {
     let m_Amps = input/1000;
-    if (m_Amps % 1 === 0) {
-      m_Amps = m_Amps.toFixed(0);
-    } else if ((m_Amps*10) % 1 === 0) {
-      m_Amps = m_Amps.toFixed(1);
-    } else {
-      m_Amps = m_Amps.toFixed(2);
-    }
-    resultsHTML += `<p>${input} MilliAmps = ${m_Amps} Amps</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = m_Amps >= 1000 ? m_Amps.toLocaleString() : m_Amps;
+    resultsHTML += `<p>${formattedInput} MilliAmps = ${formattedResult} Amps</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   } else if (electricalSelect === "mVtoV") {
     let m_Volts = input/1000;
-    if (m_Volts % 1 === 0) {
-      m_Volts = m_Volts.toFixed(0);
-    } else if ((m_Volts*10) % 1 === 0) {
-      m_Volts = m_Volts.toFixed(1);
-    } else {
-      m_Volts = m_Volts.toFixed(2);
-    }
-    resultsHTML += `<p>${input} MilliVolts = ${m_Volts} Volts</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = m_Volts >= 1000 ? m_Volts.toLocaleString() : m_Volts;
+    resultsHTML += `<p>${formattedInput} MilliVolts = ${formattedResult} Volts</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   } else if (electricalSelect === "OtoA") {
     if (input2 === 0) {
@@ -159,7 +165,10 @@ function displayElectric() {
       } else {
         current = current.toFixed(2);
       }
-      resultsHTML += `<p>${input2} Volts ÷ ${input} Ohms = ${current} Amps</p>`;
+      let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+      let formattedInput2 = input2 >= 1000 ? input2.toLocaleString() : input2;
+      let formattedResult = current >= 1000 ? current.toLocaleString() : current;
+      resultsHTML += `<p>${formattedInput2} Volts ÷ ${formattedInput} Ohms = ${formattedResult} Amps</p>`;
       resultsHTML += `<p>Formula used: I = V ÷ R</p>`;
     }
     document.getElementById("electricalResults").innerHTML = resultsHTML;
@@ -172,7 +181,9 @@ function displayElectric() {
     } else {
       ohms = ohms.toFixed(6);
     }
-    resultsHTML += `<p>${input} Ohms = ${ohms} MegaOhms</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = ohms >= 1000 ? ohms.toLocaleString() : ohms;
+    resultsHTML += `<p>${formattedInput} Ohms = ${formattedResult} MegaOhms</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   } else if (electricalSelect === "OtomO") {
     let ohms = input*1000;
@@ -183,7 +194,9 @@ function displayElectric() {
     } else {
       ohms = ohms.toFixed(2);
     }
-    resultsHTML += `<p>${input} Ohms = ${ohms} MilliOhms</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = ohms >= 1000 ? ohms.toLocaleString() : ohms;
+    resultsHTML += `<p>${formattedInput} Ohms = ${formattedResult} MilliOhms</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   } else if (electricalSelect === "OtoV") {
     if (input2 === 0) {
@@ -198,7 +211,10 @@ function displayElectric() {
       } else {
         voltage = voltage.toFixed(2);
       }
-      resultsHTML += `<p>${input} Ohms × ${input2} Amps = ${voltage} Volts</p>`;
+      let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+      let formattedInput2 = input2 >= 1000 ? input2.toLocaleString() : input2;
+      let formattedResult = voltage >= 1000 ? voltage.toLocaleString() : voltage;
+      resultsHTML += `<p>${formattedInput} Ohms × ${formattedInput2} Amps = ${formattedResult} Volts</p>`;
       resultsHTML += `<p>Formula used: V = I × R</p>`;
     }
     document.getElementById("electricalResults").innerHTML = resultsHTML;
@@ -215,7 +231,10 @@ function displayElectric() {
       } else {
         current = current.toFixed(2);
       }
-      resultsHTML += `<p>${input} Volts ÷ ${input2} Ohms = ${current} Amps</p>`;
+      let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+      let formattedInput2 = input2 >= 1000 ? input2.toLocaleString() : input2;
+      let formattedResult = current >= 1000 ? current.toLocaleString() : current;
+      resultsHTML += `<p>${formattedInput} Volts ÷ ${formattedInput2} Ohms = ${formattedResult} Amps</p>`;
       resultsHTML += `<p>Formula used: I = V ÷ R</p>`;
     }
     document.getElementById("electricalResults").innerHTML = resultsHTML;
@@ -232,7 +251,10 @@ function displayElectric() {
       } else {
         resistance = resistance.toFixed(2);
       }
-      resultsHTML += `<p>${input} Volts ÷ ${input2} Amps = ${resistance} Ohms</p>`;
+      let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+      let formattedInput2 = input2 >= 1000 ? input2.toLocaleString() : input2;
+      let formattedResult = resistance >= 1000 ? resistance.toLocaleString() : resistance;
+      resultsHTML += `<p>${formattedInput} Volts ÷ ${formattedInput2} Amps = ${formattedResult} Ohms</p>`;
       resultsHTML += `<p>Formula used: R = V ÷ I</p>`;
     }
     document.getElementById("electricalResults").innerHTML = resultsHTML;
@@ -245,7 +267,9 @@ function displayElectric() {
     } else {
       M_Volts = M_Volts.toFixed(6);
     }
-    resultsHTML += `<p>${input} Volts = ${M_Volts} MegaVolts</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = M_Volts >= 1000 ? M_Volts.toLocaleString() : M_Volts;
+    resultsHTML += `<p>${formattedInput} Volts = ${formattedResult} MegaVolts</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   } else if (electricalSelect === "VtomV") {
     let m_Volts = input*1000;
@@ -256,18 +280,15 @@ function displayElectric() {
     } else {
       m_Volts = m_Volts.toFixed(2);
     }
-    resultsHTML += `<p>${input} Volts = ${m_Volts} MilliVolts</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = m_Volts >= 1000 ? m_Volts.toLocaleString() : m_Volts;
+    resultsHTML += `<p>${formattedInput} Volts = ${formattedResult} MilliVolts</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   } else if (electricalSelect === "mOtoO") {
     let m_Ohms = input/1000;
-    if (m_Ohms % 1 === 0) {
-      m_Ohms = m_Ohms.toFixed(0);
-    } else if ((m_Ohms*10) % 1 === 0) {
-      m_Ohms = m_Ohms.toFixed(1);
-    } else {
-      m_Ohms = m_Ohms.toFixed(2);
-    }
-    resultsHTML += `<p>${input} MilliOhms = ${m_Ohms} Ohms</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = m_Ohms >= 1000 ? m_Ohms.toLocaleString() : m_Ohms;
+    resultsHTML += `<p>${formattedInput} MilliOhms = ${formattedResult} Ohms</p>`;
     document.getElementById("electricalResults").innerHTML = resultsHTML;
   }
 }
