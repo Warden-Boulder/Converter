@@ -31,13 +31,15 @@ function toGram() {
     gram = gram.toFixed(2);
   }
 
+  let formattedInput = oz >= 1000 ? parseFloat(oz).toLocaleString() : oz;
+  let formattedResult = gram >= 1000 ? parseFloat(gram).toLocaleString() : gram;
   let resultsHTML = "<h3>Result:</h3>";
   if (oz == 1) {
-     resultsHTML += `<p>${oz} ounce = `+ gram + " grams</p>";
+     resultsHTML += `<p>${formattedInput} ounce = `+ formattedResult + " grams</p>";
   } else if (gram == 1){
-    resultsHTML += `<p>${oz} ounces = `+ gram + " gram</p>";
+    resultsHTML += `<p>${formattedInput} ounces = `+ formattedResult + " gram</p>";
   } else {
-    resultsHTML += `<p>${oz} ounces = `+ gram + " grams</p>";
+    resultsHTML += `<p>${formattedInput} ounces = `+ formattedResult + " grams</p>";
   }
   document.getElementById("massResults").innerHTML = resultsHTML;
 }
@@ -54,13 +56,15 @@ function toKg() {
     kg = kg.toFixed(2);
   }
 
+  let formattedInput = stone >= 1000 ? parseFloat(stone).toLocaleString() : stone;
+  let formattedResult = kg >= 1000 ? parseFloat(kg).toLocaleString() : kg;
   let resultsHTML = "<h3>Result:</h3>";
   if (stone == 1) {
-     resultsHTML += `<p>${stone} stone = `+ kg + " Kilograms</p>";
+     resultsHTML += `<p>${formattedInput} stone = `+ formattedResult + " Kilograms</p>";
   } else if (kg == 1){
-    resultsHTML += `<p>${stone} stones = `+ kg + " Kilogram</p>";
+    resultsHTML += `<p>${formattedInput} stones = `+ formattedResult + " Kilogram</p>";
   } else {
-    resultsHTML += `<p>${stone} stones = `+ kg + " Kilograms</p>";
+    resultsHTML += `<p>${formattedInput} stones = `+ formattedResult + " Kilograms</p>";
   }
   document.getElementById("massResults").innerHTML = resultsHTML;
 }
@@ -77,13 +81,15 @@ function toKilo() {
     kilo = kilo.toFixed(2);
   }
 
+  let formattedInput = lbs >= 1000 ? parseFloat(lbs).toLocaleString() : lbs;
+  let formattedResult = kilo >= 1000 ? parseFloat(kilo).toLocaleString() : kilo;
   let resultsHTML = "<h3>Result:</h3>";
   if (kilo == 1) {
-     resultsHTML += `<p>${lbs} lbs = `+ kilo + " Kilogram</p>";
+     resultsHTML += `<p>${formattedInput} lbs = `+ formattedResult + " Kilogram</p>";
   } else if (lbs == 1) {
-     resultsHTML += `<p>${lbs} lb = `+ kilo + " Kilograms</p>";
+     resultsHTML += `<p>${formattedInput} lb = `+ formattedResult + " Kilograms</p>";
   } else {
-    resultsHTML += `<p>${lbs} lbs = `+ kilo + " Kilograms</p>";
+    resultsHTML += `<p>${formattedInput} lbs = `+ formattedResult + " Kilograms</p>";
   }
   document.getElementById("massResults").innerHTML = resultsHTML;
 }
@@ -100,13 +106,15 @@ function toLbs() {
     lbs = lbs.toFixed(2);
   }
 
+  let formattedInput = kilo >= 1000 ? parseFloat(kilo).toLocaleString() : kilo;
+  let formattedResult = lbs >= 1000 ? parseFloat(lbs).toLocaleString() : lbs;
   let resultsHTML = "<h3>Result:</h3>";
   if (kilo == 1) {
-     resultsHTML += `<p>${kilo} Kilogram = `+ lbs + " lbs</p>";
+     resultsHTML += `<p>${formattedInput} Kilogram = `+ formattedResult + " lbs</p>";
   } else if (lbs == 1) {
-    resultsHTML += `<p>${kilo} Kilograms = `+ lbs + " lb</p>";
+    resultsHTML += `<p>${formattedInput} Kilograms = `+ formattedResult + " lb</p>";
   } else {
-    resultsHTML += `<p>${kilo} Kilograms = `+ lbs + " lbs</p>";
+    resultsHTML += `<p>${formattedInput} Kilograms = `+ formattedResult + " lbs</p>";
   }
   document.getElementById("massResults").innerHTML = resultsHTML;
 }
@@ -123,13 +131,15 @@ function toLbs2() {
     lbs = lbs.toFixed(2);
   }
 
+  let formattedInput = oz >= 1000 ? parseFloat(oz).toLocaleString() : oz;
+  let formattedResult = lbs >= 1000 ? parseFloat(lbs).toLocaleString() : lbs;
   let resultsHTML = "<h3>Result:</h3>";
   if (oz == 1) {
-     resultsHTML += `<p>${oz} ounce = `+ lbs + " lbs</p>";
+     resultsHTML += `<p>${formattedInput} ounce = `+ formattedResult + " lbs</p>";
   } else if (lbs == 1) {
-    resultsHTML += `<p>${oz} ounce = `+ lbs + " lb</p>";
+    resultsHTML += `<p>${formattedInput} ounce = `+ formattedResult + " lb</p>";
   } else {
-    resultsHTML += `<p>${oz} ounces = `+ lbs + " lbs</p>";
+    resultsHTML += `<p>${formattedInput} ounces = `+ formattedResult + " lbs</p>";
   }
   document.getElementById("massResults").innerHTML = resultsHTML;
 }
@@ -146,13 +156,15 @@ function toOz() {
     oz = oz.toFixed(2);
   }
 
+  let formattedInput = gram >= 1000 ? parseFloat(gram).toLocaleString() : gram;
+  let formattedResult = oz >= 1000 ? parseFloat(oz).toLocaleString() : oz;
   let resultsHTML = "<h3>Result:</h3>";
   if (gram == 1) {
-     resultsHTML += `<p>${gram} gram = `+ oz + " ounce</p>";
+     resultsHTML += `<p>${formattedInput} gram = `+ formattedResult + " ounce</p>";
   } else if (oz == 1){
-    resultsHTML += `<p>${gram} gram = `+ oz + " ounce</p>";
+    resultsHTML += `<p>${formattedInput} gram = `+ formattedResult + " ounce</p>";
   } else {
-    resultsHTML += `<p>${gram} grams = `+ oz + " ounces</p>";
+    resultsHTML += `<p>${formattedInput} grams = `+ formattedResult + " ounces</p>";
   }
   document.getElementById("massResults").innerHTML = resultsHTML;
 }
@@ -169,13 +181,15 @@ function toOz2() {
     oz = oz.toFixed(2);
   }
 
+  let formattedInput = lbs >= 1000 ? parseFloat(lbs).toLocaleString() : lbs;
+  let formattedResult = oz >= 1000 ? parseFloat(oz).toLocaleString() : oz;
   let resultsHTML = "<h3>Result:</h3>";
   if (lbs == 1) {
-     resultsHTML += `<p>${lbs} lb = `+ oz + " ounces</p>";
+     resultsHTML += `<p>${formattedInput} lb = `+ formattedResult + " ounces</p>";
   } else if (oz == 1) {
-    resultsHTML += `<p>${lbs} lbs = `+ oz + " ounce</p>";
+    resultsHTML += `<p>${formattedInput} lbs = `+ formattedResult + " ounce</p>";
   } else {
-    resultsHTML += `<p>${lbs} lbs = `+ oz + " ounces</p>";
+    resultsHTML += `<p>${formattedInput} lbs = `+ formattedResult + " ounces</p>";
   }
   document.getElementById("massResults").innerHTML = resultsHTML;
 }
@@ -192,13 +206,15 @@ function toStone() {
     stone = stone.toFixed(2);
   }
 
+  let formattedInput = kg >= 1000 ? parseFloat(kg).toLocaleString() : kg;
+  let formattedResult = stone >= 1000 ? parseFloat(stone).toLocaleString() : stone;
   let resultsHTML = "<h3>Result:</h3>";
   if (kg == 1) {
-     resultsHTML += `<p>${kg} Kilogram = `+ stone + " stones</p>";
+     resultsHTML += `<p>${formattedInput} Kilogram = `+ formattedResult + " stones</p>";
   } else if (stone == 1) {
-    resultsHTML += `<p>${kg} Kilograms = `+ stone + " stone</p>";
+    resultsHTML += `<p>${formattedInput} Kilograms = `+ formattedResult + " stone</p>";
   } else {
-    resultsHTML += `<p>${kg} Kilograms = `+ stone + " stones</p>";
+    resultsHTML += `<p>${formattedInput} Kilograms = `+ formattedResult + " stones</p>";
   }
   document.getElementById("massResults").innerHTML = resultsHTML;
 }
