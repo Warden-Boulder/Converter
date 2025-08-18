@@ -12,7 +12,8 @@ function displayTemp() {
     } else {
       f = f.toFixed(2);
     }
-    resultsHTML += `<p>${input}°F = ${f}°C</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    resultsHTML += `<p>${formattedInput}°F = ${f}°C</p>`;
     document.getElementById("tempResults").innerHTML = resultsHTML;
   } else if (tempSelect === "CtoF") {
     let c = (input*9/5)+32;
@@ -23,7 +24,8 @@ function displayTemp() {
     } else {
       c = c.toFixed(2);
     }
-    resultsHTML += `<p>${input}°C = ${c}°F</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    resultsHTML += `<p>${formattedInput}°C = ${c}°F</p>`;
     document.getElementById("tempResults").innerHTML = resultsHTML;
   } else if (tempSelect === "FtoK") {
     let kelvin = (input-32)*(5/9)+273.15;
@@ -34,7 +36,8 @@ function displayTemp() {
     } else {
       kelvin = kelvin.toFixed(2);
     }
-    resultsHTML += `<p>${input}°F = ${kelvin} Kelvin</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    resultsHTML += `<p>${formattedInput}°F = ${kelvin} Kelvin</p>`;
     document.getElementById("tempResults").innerHTML = resultsHTML;
   } else if (tempSelect === "ck") {
     let kelvin = input+273.15; 
@@ -45,7 +48,8 @@ function displayTemp() {
     } else {
       kelvin = kelvin.toFixed(2);
     }
-    resultsHTML += `<p>${input}°C = ${kelvin} Kelvin</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    resultsHTML += `<p>${formattedInput}°C = ${kelvin} Kelvin</p>`;
     document.getElementById("tempResults").innerHTML = resultsHTML;
   } else if (tempSelect === "KtoF") {
     let f = (input-273.15)*(9/5)+32;
@@ -56,7 +60,8 @@ function displayTemp() {
     } else {
       f = f.toFixed(2);
     }
-    resultsHTML += `<p>${input} Kelvin = ${f}°F</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    resultsHTML += `<p>${formattedInput} Kelvin = ${f}°F</p>`;
     document.getElementById("tempResults").innerHTML = resultsHTML;
   } else if (tempSelect === "KtoC") {
     let c = input-273.15; 
@@ -67,7 +72,8 @@ function displayTemp() {
     } else {
       c = c.toFixed(2);
     }
-    resultsHTML += `<p>${input} Kelvin = ${c}°C</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    resultsHTML += `<p>${formattedInput} Kelvin = ${c}°C</p>`;
     document.getElementById("tempResults").innerHTML = resultsHTML;
   }
 }
