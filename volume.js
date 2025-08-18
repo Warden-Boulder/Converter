@@ -1,3 +1,4 @@
+
 function displayVolume() {
   let volumeSelect = document.getElementById('volume').value;
   let input = parseFloat(document.getElementById('VolumeInput').value) || 0;
@@ -12,10 +13,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Cup = ${result} Pints</p>`;
+      resultsHTML += `<p>1 Cup = ${formattedResult} Pints</p>`;
     } else {
-      resultsHTML += `<p>${input} Cups = ${result} Pints</p>`;
+      resultsHTML += `<p>${formattedInput} Cups = ${formattedResult} Pints</p>`;
     }
 
   } else if (volumeSelect === "imp2") { 
@@ -27,10 +30,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(4);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Cup = ${result} Gallons</p>`;
+      resultsHTML += `<p>1 Cup = ${formattedResult} Gallons</p>`;
     } else {
-      resultsHTML += `<p>${input} Cups = ${result} Gallons</p>`;
+      resultsHTML += `<p>${formattedInput} Cups = ${formattedResult} Gallons</p>`;
     }
 
   } else if (volumeSelect === "imp3") { 
@@ -42,10 +47,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Cup = ${result} Quarts</p>`;
+      resultsHTML += `<p>1 Cup = ${formattedResult} Quarts</p>`;
     } else {
-      resultsHTML += `<p>${input} Cups = ${result} Quarts</p>`;
+      resultsHTML += `<p>${formattedInput} Cups = ${formattedResult} Quarts</p>`;
     }
 
   } else if (volumeSelect === "imp4") { 
@@ -57,10 +64,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Gallon = ${result} Cups</p>`;
+      resultsHTML += `<p>1 Gallon = ${formattedResult} Cups</p>`;
     } else {
-      resultsHTML += `<p>${input} Gallons = ${result} Cups</p>`;
+      resultsHTML += `<p>${formattedInput} Gallons = ${formattedResult} Cups</p>`;
     }
 
   } else if (volumeSelect === "imp5") { 
@@ -72,10 +81,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Gallon = ${result} Pints</p>`;
+      resultsHTML += `<p>1 Gallon = ${formattedResult} Pints</p>`;
     } else {
-      resultsHTML += `<p>${input} Gallons = ${result} Pints</p>`;
+      resultsHTML += `<p>${formattedInput} Gallons = ${formattedResult} Pints</p>`;
     }
 
   } else if (volumeSelect === "imp6") { 
@@ -87,10 +98,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Gallon = ${result} Quarts</p>`;
+      resultsHTML += `<p>1 Gallon = ${formattedResult} Quarts</p>`;
     } else {
-      resultsHTML += `<p>${input} Gallons = ${result} Quarts</p>`;
+      resultsHTML += `<p>${formattedInput} Gallons = ${formattedResult} Quarts</p>`;
     }
 
   } else if (volumeSelect === "imp7") { 
@@ -102,10 +115,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Pint = ${result} Cups</p>`;
+      resultsHTML += `<p>1 Pint = ${formattedResult} Cups</p>`;
     } else {
-      resultsHTML += `<p>${input} Pints = ${result} Cups</p>`;
+      resultsHTML += `<p>${formattedInput} Pints = ${formattedResult} Cups</p>`;
     }
 
   } else if (volumeSelect === "imp8") { 
@@ -117,10 +132,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(4);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Pint = ${result} Gallons</p>`;
+      resultsHTML += `<p>1 Pint = ${formattedResult} Gallons</p>`;
     } else {
-      resultsHTML += `<p>${input} Pints = ${result} Gallons</p>`;
+      resultsHTML += `<p>${formattedInput} Pints = ${formattedResult} Gallons</p>`;
     }
 
   } else if (volumeSelect === "imp9") { 
@@ -132,10 +149,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Pint = ${result} Quarts</p>`;
+      resultsHTML += `<p>1 Pint = ${formattedResult} Quarts</p>`;
     } else {
-      resultsHTML += `<p>${input} Pints = ${result} Quarts</p>`;
+      resultsHTML += `<p>${formattedInput} Pints = ${formattedResult} Quarts</p>`;
     }
 
   } else if (volumeSelect === "imp0") { 
@@ -147,10 +166,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Quart = ${result} Cups</p>`;
+      resultsHTML += `<p>1 Quart = ${formattedResult} Cups</p>`;
     } else {
-      resultsHTML += `<p>${input} Quarts = ${result} Cups</p>`;
+      resultsHTML += `<p>${formattedInput} Quarts = ${formattedResult} Cups</p>`;
     }
 
   } else if (volumeSelect === "imp10") { 
@@ -162,10 +183,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Quart = ${result} Gallons</p>`;
+      resultsHTML += `<p>1 Quart = ${formattedResult} Gallons</p>`;
     } else {
-      resultsHTML += `<p>${input} Quarts = ${result} Gallons</p>`;
+      resultsHTML += `<p>${formattedInput} Quarts = ${formattedResult} Gallons</p>`;
     }
 
   } else if (volumeSelect === "imp11") { 
@@ -177,10 +200,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Quart = ${result} Pints</p>`;
+      resultsHTML += `<p>1 Quart = ${formattedResult} Pints</p>`;
     } else {
-      resultsHTML += `<p>${input} Quarts = ${result} Pints</p>`;
+      resultsHTML += `<p>${formattedInput} Quarts = ${formattedResult} Pints</p>`;
     }
 
   } else if (volumeSelect === "imp12") {
@@ -192,10 +217,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Tablespoon = ${result} Teaspoons</p>`;
+      resultsHTML += `<p>1 Tablespoon = ${formattedResult} Teaspoons</p>`;
     } else {
-      resultsHTML += `<p>${input} Tablespoons = ${result} Teaspoons</p>`;
+      resultsHTML += `<p>${formattedInput} Tablespoons = ${formattedResult} Teaspoons</p>`;
     }
 
   } else if (volumeSelect === "imp13") { 
@@ -207,10 +234,12 @@ function displayVolume() {
     } else {
       result = result.toFixed(3);
     }
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
     if (input === 1) {
-      resultsHTML += `<p>1 Teaspoon = ${result} Tablespoons</p>`;
+      resultsHTML += `<p>1 Teaspoon = ${formattedResult} Tablespoons</p>`;
     } else {
-      resultsHTML += `<p>${input} Teaspoons = ${result} Tablespoons</p>`;
+      resultsHTML += `<p>${formattedInput} Teaspoons = ${formattedResult} Tablespoons</p>`;
     }
 
  
@@ -223,7 +252,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Fluid Ounces = ${result} Milliliters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Fluid Ounces = ${formattedResult} Milliliters</p>`;
 
   } else if (volumeSelect === "metric2") {
     let result = input * 1000;
@@ -234,7 +265,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Liters = ${result} Milliliters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Liters = ${formattedResult} Milliliters</p>`;
 
   } else if (volumeSelect === "metric3") { 
     let result = input / 29.5735;
@@ -245,7 +278,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(3);
     }
-    resultsHTML += `<p>${input} Milliliters = ${result} Fluid Ounces</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Milliliters = ${formattedResult} Fluid Ounces</p>`;
 
   } else if (volumeSelect === "metric4") { 
     let result = input / 1000;
@@ -256,7 +291,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(3);
     }
-    resultsHTML += `<p>${input} Milliliters = ${result} Liters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Milliliters = ${formattedResult} Liters</p>`;
 
   } else if (volumeSelect === "metric5") { 
     let result = input / 14.7868;
@@ -267,7 +304,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(3);
     }
-    resultsHTML += `<p>${input} Milliliters = ${result} Tablespoons</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Milliliters = ${formattedResult} Tablespoons</p>`;
 
   } else if (volumeSelect === "metric6") { 
     let result = input / 4.92892;
@@ -278,7 +317,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(3);
     }
-    resultsHTML += `<p>${input} Milliliters = ${result} Teaspoons</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Milliliters = ${formattedResult} Teaspoons</p>`;
 
   } else if (volumeSelect === "metric7") { 
     let result = input * 14.7868;
@@ -289,7 +330,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Tablespoons = ${result} Milliliters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Tablespoons = ${formattedResult} Milliliters</p>`;
 
   } else if (volumeSelect === "metric8") { 
     let result = input * 4.92892;
@@ -300,7 +343,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Teaspoons = ${result} Milliliters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Teaspoons = ${formattedResult} Milliliters</p>`;
 
   
   } else if (volumeSelect === "other1") { 
@@ -310,7 +355,9 @@ function displayVolume() {
     } else {
       result = result.toExponential(3);
     }
-    resultsHTML += `<p>${input} Cubic Centimeters = ${result} Cubic Feet</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Cubic Centimeters = ${formattedResult} Cubic Feet</p>`;
 
   } else if (volumeSelect === "other2") { 
     let result = input / 16.3871;
@@ -321,7 +368,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(3);
     }
-    resultsHTML += `<p>${input} Cubic Centimeters = ${result} Cubic Inches</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Cubic Centimeters = ${formattedResult} Cubic Inches</p>`;
 
   } else if (volumeSelect === "other3") { 
     let result = input * 28316.8;
@@ -332,7 +381,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Cubic Feet = ${result} Cubic Centimeters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Cubic Feet = ${formattedResult} Cubic Centimeters</p>`;
 
   } else if (volumeSelect === "other4") { 
     let result = input * 1728;
@@ -343,7 +394,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Cubic Feet = ${result} Cubic Inches</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Cubic Feet = ${formattedResult} Cubic Inches</p>`;
 
   } else if (volumeSelect === "other5") { 
     let result = input * 16.3871;
@@ -354,7 +407,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Cubic Inches = ${result} Cubic Centimeters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Cubic Inches = ${formattedResult} Cubic Centimeters</p>`;
 
   } else if (volumeSelect === "other6") { 
     let result = input / 1728;
@@ -365,7 +420,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(6);
     }
-    resultsHTML += `<p>${input} Cubic Inches = ${result} Cubic Feet</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Cubic Inches = ${formattedResult} Cubic Feet</p>`;
 
   } else if (volumeSelect === "other7") { 
     let result = input * 4.54609;
@@ -376,7 +433,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Gallons (UK) = ${result} Liters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Gallons (UK) = ${formattedResult} Liters</p>`;
 
   } else if (volumeSelect === "other8") { 
     let result = input * 3.78541;
@@ -387,7 +446,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(2);
     }
-    resultsHTML += `<p>${input} Gallons (US) = ${result} Liters</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Gallons (US) = ${formattedResult} Liters</p>`;
 
   } else if (volumeSelect === "other9") { 
     let result = input / 4.54609;
@@ -398,7 +459,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(3);
     }
-    resultsHTML += `<p>${input} Liters = ${result} Gallons (UK)</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Liters = ${formattedResult} Gallons (UK)</p>`;
 
   } else if (volumeSelect === "other0") { 
     let result = input / 3.78541;
@@ -409,7 +472,9 @@ function displayVolume() {
     } else {
       result = result.toFixed(3);
     }
-    resultsHTML += `<p>${input} Liters = ${result} Gallons (US)</p>`;
+    let formattedInput = input >= 1000 ? input.toLocaleString() : input;
+    let formattedResult = result >= 1000 ? parseFloat(result).toLocaleString() : result;
+    resultsHTML += `<p>${formattedInput} Liters = ${formattedResult} Gallons (US)</p>`;
   }
 
   document.getElementById("volumeResults").innerHTML = resultsHTML;
